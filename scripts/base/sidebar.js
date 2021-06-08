@@ -36,7 +36,7 @@ class SideBar {
     itemClick() {
         let me = this;
 
-        me.Sidebar.find(".nav__item").on("click", function(){
+        me.Sidebar.find(".nav__item:not(:first-child)").on("click", function(){
             me.Sidebar.find(".nav__item:not(:first-child)").removeClass("dropdown__row--selected");
             $(this).addClass("dropdown__row--selected");
         });

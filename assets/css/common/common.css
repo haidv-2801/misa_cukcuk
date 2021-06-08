@@ -425,6 +425,7 @@ button:active {
 }
 
 .dropdown__items {
+    z-index: 9999999;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 174px;
     background-color: white;
@@ -584,6 +585,7 @@ button:active {
 }
 
 .main__grid {
+    position: relative;
     overflow: auto;
     width: 100%;
     margin-top: 10px;
@@ -609,8 +611,15 @@ table tbody tr:nth-child(odd) {
     background-color: #f8f6f6;
 }
 
-table th div {
+table thead tr {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
 
+table th {
+   
+    position: sticky;
+    background-color: #fff;
+    top: 0;
 }
 
 table td,th {

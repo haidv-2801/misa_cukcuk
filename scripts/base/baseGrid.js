@@ -14,6 +14,7 @@ class BaseGrid {
         //thuộc tính formdetail
         me.formDetail = null;
         me.cacheDataGrid = null;
+        me.pagination = null;
 
     }
 
@@ -25,6 +26,16 @@ class BaseGrid {
         let me = this;
 
         me.formDetail = new BaseForm(formId);
+    }
+
+    /**
+     * Hàm tạo base form
+     * DVHAI 08/06/2021
+     */
+    pagination(pageId) {
+        let me = this;
+
+        
     }
 
     initEvents() {
@@ -399,7 +410,7 @@ class BaseGrid {
     loadThead() {
         let me = this,
             thead = $("<thead></thead>"),
-            tr = $('<tr><td><input data-head="true" type="checkbox"></td></tr>'),
+            tr = $('<tr><th><input data-head="true" type="checkbox"></th></tr>'),
             cols = me.grid.find(".col");
         
         cols.filter(function(){
