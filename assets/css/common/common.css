@@ -421,13 +421,13 @@ button:active {
 
 .dropdown {
     position: relative;
-    width: 173px;
+    width: 180px;
 }
 
 .dropdown__items {
     z-index: 9999999;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 174px;
+    width: 180px;
     background-color: white;
     top: 40px;
     position: absolute;
