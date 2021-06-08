@@ -13,35 +13,57 @@
     
     <!-- Individual -->
     <link rel="stylesheet" href="./assets/css/views/employee.css">
+    <style>
+        .form__add {
+            width: 600px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
+        .form__head {
+            height: 40px;
+            background-color: lightblue;
+        }
+
+        .head__title {
+            line-height: 40px;
+        }
+
+        .head__btnclose {
+            background-color: lime;
+            width: 20px;
+            height: 20px;
+        }
+
+        .form__main {
+            background-color: lightcoral;
+            flex:1;
+        }
+
+        .form__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 40px;
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
     
     <div class="form__add">
-        <div class="form__head"></div>
+        <div class="form__head">
+            <div class="head__title">THÔNG TIN NHÂN VIÊN</div>
+            <div class="head__btnclose">x</div>
+        </div>
         <div class="form__main"></div>
-        <div class="form__bottom"></div>
+        <div class="form__bottom">
+            <button>Hủy</button>
+            <button>Lưu</button>
+        </div>
     </div>
        
-    <!-- Library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./assets/lib/sweetalert/sweetalert.min.js"></script>
-    <script src="./assets/icon/fontawesome-5.15.1/js/all.min.js"></script>
-
-    <!-- Common -->
-    <script src="scripts/common/common.js"></script>
-    <script src="scripts/common/constant.js"></script>
-    <script src="scripts/common/enumeration.js"></script>
-    <script src="scripts/common/resource.js"></script>
-
-    <script src="./scripts/base/baseForm.js"></script>
-    <script src="./scripts/base/baseGrid.js"></script>
-    <script src="./scripts/base/sidebar.js"></script>
-    <script src="./scripts/base/toolBar.js"></script>
-    
-    <!-- Individual -->
-    <script src="./scripts/views/employee/employeeDetail.js"></script>
-    <script src="./scripts/views/employee/employee.js"></script>
 </body>
 </html>
