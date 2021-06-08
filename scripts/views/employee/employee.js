@@ -29,3 +29,4 @@ var employee = new Employee('#grid-data');
 
 //khởi tạo ra 1 đói tượng employee
 employee.initFormDetail('#formEmployeeDetail');
+

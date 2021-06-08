@@ -106,7 +106,7 @@ class BaseGrid {
      initEventsToolbar() {
         let me = this,
             toolbarId = me.grid.attr("Toolbar"),
-            toolbar = $(`#${toolbarId}`);
+            toolbar = $(`.${toolbarId}`);
 
             
         if(toolbar.length > 0) {
@@ -205,14 +205,14 @@ class BaseGrid {
      * DVHAI 04/06/2021
      */
      delete() {
-         debugger
         let me = this,
             method = Resource.Method.Delete,
             itemId = me.ItemId,
             record = {...me.getSelectedRecord()},
             url = `${Constant.urlPrefix}${me.urlDelete}`,
             urlFull = `${url}/${record[itemId]}`;
-        
+
+            alert("delete")
         //nếu chưa có bản ghi nào hoặc chưa đc họn
         if(!record)
             return;

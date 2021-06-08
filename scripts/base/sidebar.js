@@ -22,6 +22,24 @@ class SideBar {
 
         //Hàm ẩn thu gọn, mở rộng sidebar 
         me.toggleSidebar();
+
+        //sự kiện click navbar
+        me.itemClick();
+    }
+
+
+    /**
+     * Khi click vào item trong navbar
+     * màu của item thay đổi
+     * DVHAI 08/06/2021
+     */
+    itemClick() {
+        let me = this;
+
+        me.Sidebar.find(".nav__item").on("click", function(){
+            me.Sidebar.find(".nav__item:not(:first-child)").removeClass("dropdown__row--selected");
+            $(this).addClass("dropdown__row--selected");
+        });
     }
 
     /**

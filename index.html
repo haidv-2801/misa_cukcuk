@@ -95,45 +95,52 @@
             <!-- main content -->
             <div class="main">
 
-               <div class="main__toolbar">
+               <div  class="main__toolbar employeeToolbar">
                    <div class="toolbar__left title">
                        Danh sách nhân viên
                    </div>
                    <div class="toolbar__right">
-                       <button class="buttonItem" commandtype="Add"  title="Thêm mới" tabindex="10">
+                       <button class="btn buttonItem" commandtype="Add"  title="Thêm mới" tabindex="10">
                            <span>Thêm nhân viên</span>
                         </button>
-                        <button class="buttonItem" commandtype="Delete"  title="Xóa nhân viên" tabindex="10">
+                        <button class="btn buttonItem" commandtype="Delete"  title="Xóa nhân viên" tabindex="10">
                             <span>Xóa</span>
                         </button>
-                        <button class="buttonItem" commandtype="Edit"  title="Sửa nhân viên" tabindex="10">
+                        <button class="btn buttonItem" commandtype="Edit"  title="Sửa nhân viên" tabindex="10">
                             <span>Sửa</span>
                         </button>
                    </div>
                </div>
-               <div id="employeeToolbar" class="main__filter">
+               <div class="main__filter employeeToolbar">
                     <div class="filter__left">
                         <input tabindex="7" class="search-box focus left__item" type="text" placeholder="Tìm kiếm theo Mã Tên hoặc Số điện thoại ">
                         
                         <div class="dropdown left__item">
-                            <input tabindex="8" class="dropdown-box focus" type="dropdown" value="Tất cả phòng ban" type="text">
+                            <input tabindex="8" class="dropdown-box focus" type="dropdown" value="Tất cả phòng ban">
+                                
                             <div class="dropdown__items">
                                 <div class="dropdown__row" row="1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng hành chính</span> 
                                 </div>
                                 <div class="dropdown__row" row="2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng kế toán</span> 
                                 </div>
                                 <div class="dropdown__row" row="3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng sản xuất</span> 
                                 </div>
                             </div>
@@ -142,22 +149,28 @@
                         <div class="dropdown left__item">
                             <input tabindex="9" class="dropdown-box focus" type="dropdown" value="Tất cả vị trí" type="text">
                             <div class="dropdown__items">
-                                <div class="dropdown__row" row="1" value="1" type="dropdown-row">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                <div class="dropdown__row" row="1">
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng hành chính</span> 
                                 </div>
-                                <div class="dropdown__row" row="2" value="2" type="dropdown-row">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                <div class="dropdown__row" row="2">
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng kế toán</span> 
                                 </div>
-                                <div class="dropdown__row" row="3" value="3" type="dropdown-row">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                <div class="dropdown__row" row="3">
+                                    <div class="svg__box">
+                                     <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                                     </svg>
+                                      </div>  
                                     <span>Phòng sản xuất</span> 
                                 </div>
                             </div>
@@ -165,7 +178,7 @@
                         <!-- <div class="dropdown__item"></div> -->
                     </div>
                     <div class="filter__right">
-                        <button class="buttonItem" commandtype="Refresh" tabindex="11"></button>
+                        <button class="btn buttonItem" commandtype="Refresh" tabindex="11"></button>
                     </div>
                </div>
                <div id="grid-data" class="main__grid" Url="v1/Employees" Toolbar="employeeToolbar" ItemId="EmployeeId">
@@ -174,9 +187,11 @@
                     <div class="col hide" FieldName="FullName">Tên nhân viên</div>
                     <div class="col hide" FieldName="Gender" EnumName="Gender" DataType="Enum">Giới tính</div>
                     <div class="col hide" FieldName="DateOfBirth" DataType="Date" >Ngày sinh</div>
-                    <div class="col hide" FieldName="PhoneNumber">Số điện thoại</div>
+                    <div class="col hide" FieldName="PhoneNumber" DataType="Number">Số điện thoại</div>
                     <div class="col hide" FieldName="Email">Email</div>
                     <div class="col hide" FieldName="Address">Địa chỉ</div>
+                    <div class="col hide" FieldName="PositionName">Chức vụ</div>
+                    <div class="col hide" FieldName="DepartmentName">Chức vụ</div>
                     <div class="col hide" FieldName="Salary" DataType="Number">Lương</div>
 
                     <!-- data table -->
@@ -189,10 +204,10 @@
                         <svg tabindex="13" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-left"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
                         <svg tabindex="14" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
                        
-                        <button tabindex="15" class="btn-number"><span>1</span></button>
-                        <button tabindex="16" class="btn-number"><span>2</span></button>
-                        <button tabindex="17" class="btn-number"><span>3</span></button>
-                        <button tabindex="18" class="btn-number"><span>4</span></button>
+                        <button tabindex="15" class="btn btn-number"><span>1</span></button>
+                        <button tabindex="16" class="btn btn-number"><span>2</span></button>
+                        <button tabindex="17" class="btn btn-number"><span>3</span></button>
+                        <button tabindex="18" class="btn btn-number"><span>4</span></button>
                         
                         <svg tabindex="19" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                         <svg tabindex="20" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
@@ -209,6 +224,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/lib/sweetalert/sweetalert.min.js"></script>
+    <script src="./assets/icon/fontawesome-5.15.1/js/all.min.js"></script>
 
     <!-- Common -->
     <script src="scripts/common/common.js"></script>

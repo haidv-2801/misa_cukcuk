@@ -21,6 +21,11 @@
 }
 
 
+.dropdown__row--selected {
+    background-color: #019160;
+    color: white;
+}
+
 /* loader css */
 #loading {
     display: none;
@@ -106,7 +111,7 @@ body {
 /* input */
 /* search  */
 .focus:focus-visible {
-    outline-color: #019160;
+    outline-color: #019160 ;
 }
 
 .search-box {
@@ -122,10 +127,10 @@ body {
 
 /* dropdown  */
 .dropdown-box {
-    background-image: url(../../icon/arrow-down.svg);
-    background-position: 155px center;
+    background-image: url(../../icon/arrow-down.svg), url(../../icon/x.svg);
+    background-position: calc(100% - 8px) center, calc(100% - 30px) center;
     background-repeat: no-repeat;
-    background-size: 16px 16px;
+    background-size: 16px 16px, 0px 0px;
     border:1px solid #BBBBBB;
     text-indent: 16px;
     color: #000000;
@@ -133,6 +138,10 @@ body {
     font-family: 'GoogleRegular';
     height: 40px !important;
     font-size: 13px;
+}
+
+.dropdown-bg-size {
+    background-size: 16px 16px, 16px 16px !important;
 }
 
 /* font */
@@ -146,7 +155,7 @@ body {
 }
 
 /* button */
-button {
+button.btn {
     outline: none;
     border: none;
     font-family: GoogleRegular;
@@ -156,7 +165,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+button.btn:hover {
     background-color: #2FBE8E;
 }
 
@@ -400,6 +409,7 @@ button:active {
 }
 
 
+
 /* filter css */
 .filter__left {
     display: flex;
@@ -411,12 +421,12 @@ button:active {
 
 .dropdown {
     position: relative;
-    width: 179px;
+    width: 173px;
 }
 
 .dropdown__items {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 182px;
+    width: 174px;
     background-color: white;
     top: 40px;
     position: absolute;
@@ -444,8 +454,11 @@ button:active {
     flex: 1;
 }
 
-.dropdown__row svg {
+.dropdown__row .svg__box {
+    display: flex;
+    width: 16px;
     margin: 0 12px;
+    height: 16px;
 }
 
 .dropdown__row:hover {
@@ -501,8 +514,7 @@ button:active {
 }
 
 .pagi__left {
-
-flex: 2;
+    flex: 2;
 }
 
 .pagi__mid {
@@ -515,7 +527,8 @@ flex: 2;
 }
 
 .pagi__mid button {
-    border: 1px solid var(--color-hint);
+    border: 1px solid var(
+    --color-hint);
     background: white;
     cursor: pointer;
     outline: none;
@@ -562,6 +575,14 @@ flex: 2;
 
 
 /* table  */
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
 .main__grid {
     overflow: auto;
     width: 100%;
@@ -570,7 +591,7 @@ flex: 2;
 }
 
 .selected-row {
-    background-color: #e2e2e2;
+    background-color: #e2e2e2 !important;
 }
 
 table {

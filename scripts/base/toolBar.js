@@ -89,9 +89,27 @@
 
         me.Toolbar.find("[row]").on("click", function () {
             let value = $(this).find("span").text();
+
+            //set value cho dropdown khi click
             $(this).parent().parent().find("[type=dropdown]").val(value);
+
+            //xoay icon arrow
             $(this).parent().parent().find("[type=dropdown]").toggleClass("rotate");
+
+            //chọn xong thì cuộn lên
             $(this).parent().slideToggle();
+
+            //selected dropdown row
+            //Xóa tất cả thuộc tính selected 
+            $(this).parent().find("[row]").removeClass("dropdown__row--selected");
+            //thêm lại cho thằng được click
+            $(this).addClass("dropdown__row--selected");
+            //thêm dấu tích bằng các show icon
+            $(this).parent().find("svg").hide();
+            $(this).find("svg").show();
+
+            //ẩn hiện dấu x khi 1 row được chọn
+            $(this).parent().parent().find("[type=dropdown]").addClass("dropdown-bg-size");
         });
     }
 
