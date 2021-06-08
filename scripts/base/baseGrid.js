@@ -216,7 +216,7 @@ class BaseGrid {
         //nếu chưa có bản ghi nào hoặc chưa đc họn
         if(!record)
             return;
-       
+       debugger
        
         swal({
             title: `Bạn có chắc muốn xóa ${me.entity} này?`,
