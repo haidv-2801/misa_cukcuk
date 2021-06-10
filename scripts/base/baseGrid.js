@@ -55,6 +55,17 @@ class BaseGrid {
 
         //sự kiện keyup
         me.initKeyupEvent();
+
+        //sự kiện paging
+        me.initEventPaging();
+        
+    }
+
+     /**
+     * Sự kiện thao tác phân trang
+     * DVHAI 04/06/2021
+     */
+    initEventPaging() {
         
     }
 
