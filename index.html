@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="./assets/css/common/common.css">
     
     <!-- Individual -->
-    <link rel="stylesheet" href="./assets/css/views/employee.css">
+    <link rel="stylesheet" href="./assets/css/views/employee/employee.css">
+    <link rel="stylesheet" href="./assets/css/views/employee/formadd.css">
 
 </head>
 <body>
     <!-- loader -->
-    <div id="loading">
+    <!-- <div id="loading">
         <img id="loading-image" src="./assets/img/loader.gif" alt="Loading..." />
-    </div>
+    </div> -->
 
     <!-- wrapper -->
     <div class="wrapper">
@@ -182,6 +183,88 @@
                     </div>
                </div>
                <div id="grid-data" class="main__grid" Url="v1/Employees" Toolbar="employeeToolbar" ItemId="EmployeeId">
+
+                    <!-- form add -->
+                    <div id="formEmployeeDetail" class="form__add hide" >
+                        <div class="form__head">
+                            <div class="head__left">
+                                <h2>THÔNG TIN NHÂN VIÊN</h2>
+                            </div>
+                            <div class="head__right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form__main">
+                            <div class="main__left">
+                                <div class="img__field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                    </svg>
+                                </div>
+                                <div class="img__required">
+                                    (Vui lòng chọn ảnh có định <br> dạng <br>.jpg .jpeg .png .gif)
+                                </div>
+                            </div>
+                            <div class="main__right">
+                                <div class="form__group">
+                                    <div class="form__title">
+                                        A. THÔNG TIN CHUNG
+                                    </div>
+                                    <div class="title__solid--blue"></div>
+                                    <div class="form__content">
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Mã nhân viên(<span class="required">*</span>)</label><input class="focus" type="text"></div>
+                                            <div class="row__item"> <label for="">Họ và tên(<span class="required">*</span>)</label><input class="focus" type="text"></div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Ngày sinh</label><input class="focus" type="date"></div>
+                                            <div class="row__item"> <label for="">Giới tính</label><input class="focus" type="text"></div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Số CMTND/ Căn cước(<span class="required">*</span>)</label><input class="focus" type="text"></div>
+                                            <div class="row__item"> <label for="">Ngày cấp</label><input class="focus" type="date"></div>
+                                        </div>   
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Nơi cấp</label><input class="focus" type="text"></div>
+                                            <div class="row__item"></div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Email(<span class="required">*</span>)</label><input class="focus" type="text"></div>
+                                            <div class="row__item"> <label for="">Số điện thoại(<span class="required">*</span>)</label><input class="focus" type="text"></div>
+                                        </div>   
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__title">
+                                        B. THÔNG TIN CÔNG VIỆC
+                                    </div>
+                                    <div class="title__solid--blue"></div>
+                                    <div class="form__content">
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Vịtrí</label><input class="focus" type="text"></div>
+                                            <div class="row__item"> <label for="">Phòng ban</label><input class="focus" type="text"></div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Mã số thuế cá nhân</label><input class="focus" type="text"></div>
+                                            <div class="row__item"> <label for="">Mức lương cơ bản</label><input class="focus" type="text"></div>
+                                        </div>
+                                        <div class="form__row">
+                                            <div class="row__item"> <label for="">Ngày gia nhập công ty</label><input class="focus" type="date"></div>
+                                            <div class="row__item"> <label for="">Tình trạng công việc</label><input class="focus" type="text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__bottom">
+                            <button class="btn-default">Hủy</button>
+                            <button class="btn-default btn-green">Lưu</button>
+                        </div>
+                    </div>
+
                    <!-- hide column name -->
                     <div class="col hide" FieldName="EmployeeCode">Mã nhân viên</div>
                     <div class="col hide" FieldName="FullName">Tên nhân viên</div>
