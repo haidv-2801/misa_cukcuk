@@ -118,7 +118,6 @@ class BaseGrid {
         let me = this,
             toolbarId = me.grid.attr("Toolbar"),
             toolbar = $(`.${toolbarId}`);
-
             
         if(toolbar.length > 0) {
             toolbar.find(".buttonItem").on("click", function () {
@@ -177,7 +176,7 @@ class BaseGrid {
      * DVHAI 02/06/2021
      */
     add() {
-        
+        debugger
         let me = this,
             param = {
                 Parent: me,

@@ -1,0 +1,188 @@
+
+.focus:focus-visible {
+    outline-color: #019160 ;
+}
+
+.required {
+    color: red;
+}
+
+/* button */
+.btn-default {
+    cursor: pointer !important;
+    padding: 0 16px;
+    outline: none;
+    border: none;
+    font-family: GoogleRegular;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.btn-green {
+    color: #ffffff;
+    background-color: #019160;
+}
+
+.btn-green:hover {
+    background-color: #2FBE8E;
+}
+
+.btn-green:active {
+    background-color: #01B075;
+}
+
+html {
+    font-family: GoogleRegular;
+    font-size: 13px;
+    background-color: whitesmoke;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.form__add {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 9999999999999999999;
+    position: fixed;
+    background-color: white;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+    height: fit-content;
+    width: 740px;
+}
+
+.form__head,.form__main, .form__bottom {
+    padding: 0 24px;
+}
+
+.form__title {
+   font-family: GoogleMedium;
+   font-size: 15px;
+}
+
+.form__head {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head__left {
+
+}
+
+.head__right {
+    cursor: pointer;
+}
+
+.head__right:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.form__main {
+    display: flex;
+    flex: 1;
+}
+
+.main__left {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.img__field {
+    width: 150px;
+    height: 150px;
+}
+
+.img__field svg {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    fill: #BBBBBB;
+}
+
+.img__required {
+    text-align: center;
+}
+
+.main__right {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.form__group {
+    width: 100%;
+}
+
+.form__group:first-child {
+    flex: 2;
+}
+
+.form__group input {
+    width: 100%;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    color: #000000;
+    height: 36px !important;
+}
+
+.form__row {
+    display: flex;
+    margin: 0px 0px 16px 0px;
+}
+
+.form__bottom {
+    background-color: #E9EBEE;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form__bottom button {
+    margin-left: 20px;
+}
+
+.row__item label {
+    margin-bottom: 4px;
+    font-family: GoogleMedium;
+    font-size: 13px;
+    display: block;
+}
+
+.row__item {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.title__solid--blue {
+    margin: 10px 0px;
+    height: 4px;
+    width: 100px;
+    background-color: #019160;
+}
+
+/* gender */
+
+.dropdown__gender {
+    position: relative;
+    width: 100%;
+}

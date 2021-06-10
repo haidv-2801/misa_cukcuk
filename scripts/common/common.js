@@ -119,13 +119,19 @@ CommonFn.Ajax = (url, method, data, fnCallBack, async = true) => {
         dataType: "json",
         beforeSend:function() {
             $('#loading').show();
+            // setTimeout(() => {
+            //     $('#loading').hide();
+            // }, 5000);
         },
         success: function (response) {
-            $('#loading').hide();
+            
             fnCallBack(response);
         },
         error: function (errormessage) {
             console.log(errormessage.responseText);
+        },
+        complete: function() {
+            $('#loading').hide();
         }
     })
 }

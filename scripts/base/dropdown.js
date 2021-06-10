@@ -3,45 +3,32 @@
  * Class toolbar
  * DVHAI 06/06/2021
  */
- class ToolBar {
-    constructor(toolbarId) {
+ class Dropdown {
+    constructor(dropdownId) {
         let me = this;
 
-        me.Toolbar = $(`${toolbarId}`);
+        me.Toolbar = $(`${dropdownId}`);
 
         //khởi tạo các sự kiện trên toolbar
         me.initEvents();
 
         //readonly cho dropdown-box
-        me.Toolbar.find("input.dropdown-box").prop('readonly', true);
+        me.Toolbar.find(".dropdown-box").prop('readonly', true);
     }
 
     /**
-     * Hàm chứa các sự kiện trên toolbar
+     * Hàm chứa các sự kiện trên dropdown
      * DVHAI 06/06/2021
      */
     initEvents() {
         let me = this;
-
-        //Hàm ẩn thu gọn, mở rộng toolbar 
-        me.toggleToolbar();
-
 
         //Các event trong dropdown: keyup,click
         me.eventDropdown();
     }
 
     /**
-     * Hàm ẩn thu gọn, mở rộng toolbar 
-     * khi click toggle icon
-     * DVHAI 06/06/2021
-     */
-    toggleToolbar() {
-        let me = this;
-    }
-
-    /**
-     * Hàm sự kiện drodown trong toolbar
+     * Hàm sự kiện drodown
      * DVHAI 06/06/2021
      */
     eventDropdown() {
@@ -125,4 +112,4 @@
 }
 
 
-var toolbar = new ToolBar(".main__filter");
+var dropdown = new Dropdown(".dropdown__key");

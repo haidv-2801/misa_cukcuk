@@ -52,6 +52,7 @@ class SideBar {
 
         me.Sidebar.find(".btnToggle").on("click", function () {
                 me.Sidebar.toggleClass("collapsed-sidebar-width");
+                // $(".wrapper").toggleClass("collapsed-sidebar-width");
         });
     }
 }

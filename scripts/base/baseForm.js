@@ -59,7 +59,7 @@ class BaseForm {
     draggable() {
         let me = this;
         
-        me.Form.draggable({ handle: ".form-head" });
+        me.Form.draggable({ handle: ".form__head" });
     }
     
     
@@ -125,6 +125,12 @@ class BaseForm {
                 value = CommonFn.convertDate(value);
             case Resource.DataTypeColumn.Number:
                 value = CommonFn.formatMoneyVer2(value);
+                break;
+            case Resource.DataTypeColumn.Enum:
+                debugger
+                let enumName = control.attr("EnumName");
+                value = CommonFn.getValueEnum(value, enumName);
+                break;
             break;
          }
 
@@ -146,6 +152,7 @@ class BaseForm {
 
             switch(command) {
                 case Resource.CommandForm.Save:
+                    debugger
                     me.save();
                     break;
                 case Resource.CommandForm.Cancel:
@@ -165,6 +172,7 @@ class BaseForm {
      * DVHAI 02/06/2021
      */
     save() {
+        debugger
         let me = this,
             isValid = me.validateForm();
         
@@ -189,12 +197,11 @@ class BaseForm {
             urlFull = `${Constant.urlPrefix}${url}`;
         
         if(me.FormMode == Enumeration.FormMode.Edit) {
-            debugger
             url = me.Parent.urlEdit;
             method = Resource.Method.Put;
             urlFull = `${Constant.urlPrefix}${url}/${data[me.ItemId]}`;
         }
-        debugger
+
         CommonFn.Ajax(urlFull, method, data, function(response){
             if(response) {
                
@@ -357,7 +364,7 @@ class BaseForm {
             data[fieldName] = value;
         });
         var test = data;
-        debugger
+
         return data;
     }
 
@@ -370,7 +377,7 @@ class BaseForm {
      */
     cancel() {
         let me = this;
-
+        $(".overlay").toggle();
         me.Form.hide();
     }
     
@@ -416,6 +423,7 @@ class BaseForm {
     show() {
         let me = this;
 
+        $(".overlay").toggle();
         me.Form.show();
 
         //reset dữ liệu
