@@ -1,0 +1,275 @@
+.rotate {
+    background-image: url(../../icon/arrow-up.svg) !important;
+}
+
+.style__number {
+    text-align: right;
+}
+
+.style__date {
+    text-align: center;
+}
+/* main css */
+.main {
+    flex-direction: column;
+    display: flex;
+    padding: 10px 16px;
+    flex: 1;
+    width: 100%;
+}
+
+.main__toolbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__filter {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* toolbar css */
+.toolbar__left {
+
+}
+
+.toolbar__right {
+
+}
+
+.toolbar__right button {
+    padding: 0;
+    cursor: pointer;
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    background-image: url("../../icon/add.png");
+}
+
+.toolbar__right span {
+    padding-right: 16px;
+    padding-left: 44px;
+}
+
+
+
+/* filter css */
+.filter__left {
+    display: flex;
+}
+
+.left__item {
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+    width: calc(var(--size-width-M) * 3);
+}
+
+.dropdown__items {
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 100%;
+    background-color: white;
+    top: 40px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    border-radius: 4px;
+    padding: 3px 0;
+}
+
+
+.dropdown__row {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    justify-content: space-between;
+}
+
+.dropdown__row span {
+    flex: 1;
+}
+
+.dropdown__row .svg__box {
+    display: flex;
+    width: 16px;
+    margin: 0 12px;
+    height: 16px;
+}
+
+.dropdown__row--hover {
+    background-color: #E9EBEE;
+ }
+
+.filter__left input {
+    width: calc(var(--size-width-M) * 4);
+    border: 1px solid var(--color-hint);
+    border-radius: 4px;
+}
+
+.filter__left input[type=dropdown] {
+    width: 100%;
+    cursor: pointer;
+}
+
+.filter__left input::placeholder {
+    font-size: 11px;
+    color: #BBBBBB;
+    color: var(--color-hint);
+}
+
+.filter__right {
+
+}
+
+.filter__right button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-hint);
+    outline: var(--color-hint);
+    background-color: white;
+    background-image: url(../../icon/refresh.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.filter__right button:hover {
+    background-color: #E9EBEE;
+}
+
+.filter__right button:focus-visible {
+    border: 1px solid #019160;
+}
+/* pagination css */
+.main__pagination {
+    align-items: center;
+    display: flex;
+    height: 56px;
+    justify-content: space-between;
+}
+
+.pagi__left {
+    flex: 2;
+}
+
+.pagi__mid {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.pagi__mid button {
+    border: 1px solid var(
+    --color-hint);
+    background: white;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #000000;
+}
+
+.pagi__mid button:focus-visible {
+    background-color: #019160;
+    color: white;
+}
+
+.pagi__mid button:hover {
+    background-color: #E9EBEE;
+}
+
+/* các button pre, next, first, last 
+    trong phân trang
+*/
+.pagi__mid svg:first-child {
+    margin-right: 20px;
+}
+
+.pagi__mid svg:nth-child(2) {
+    margin-right: 15px;
+}
+
+.pagi__mid svg:nth-of-type(3) {
+    margin-left: 15px;
+}
+
+.pagi__mid svg:nth-of-type(4) {
+    margin-left: 20px;
+}
+
+.pagi__right {
+    text-align: right;
+    flex: 2;
+}
+
+
+/* table  */
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.main__grid {
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    margin-top: 10px;
+    height: calc(100vh - 228px);
+}
+
+.selected-row {
+    background-color: #e3f3ee !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    cursor: pointer;
+    height: 40px;
+    border-bottom: 1px solid var(--color-hint);
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+table tbody tr:hover {
+    background-color: #e9ebee;
+}
+
+table thead tr {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+table th {
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+}
+
+table td,th {
+    white-space: nowrap;
+    padding: 0 10px 0 16px;
+    text-align: left;
+}
