@@ -50,8 +50,8 @@
 
 
 .dropdown__row--selected {
-    background-color: #019160;
-    color: white;
+    background-color: #019160 !important;
+    color: white !important;
 }
 
 .d-flex {
@@ -455,11 +455,6 @@ button:active {
 }
 
 
-.dropdown__row:active {
-    background-color: #019160 !important;
-    color: white;
-}
-
 .dropdown__row {
     align-items: center;
     display: flex;
@@ -479,7 +474,7 @@ button:active {
     height: 16px;
 }
 
-.dropdown__row:hover {
+.dropdown__row--hover {
     background-color: #E9EBEE;
  }
 

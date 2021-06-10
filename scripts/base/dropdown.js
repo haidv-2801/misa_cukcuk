@@ -1,19 +1,19 @@
 
 /**
- * Class toolbar
+ * Class Dropdown
  * DVHAI 06/06/2021
  */
  class Dropdown {
     constructor(dropdownId) {
         let me = this;
 
-        me.Toolbar = $(`${dropdownId}`);
+        me.Dropdown = $(`${dropdownId}`);
 
-        //khởi tạo các sự kiện trên toolbar
+        //khởi tạo các sự kiện trên Dropdown
         me.initEvents();
 
         //readonly cho dropdown-box
-        me.Toolbar.find(".dropdown-box").prop('readonly', true);
+        me.Dropdown.find(".dropdown-box").prop('readonly', true);
     }
 
     /**
@@ -39,8 +39,24 @@
         me.dropdownRowClick();
 
         // me.dropdownKeyup();
+
+        me.itemHover();
     }
-    
+
+    /**
+     * 
+     */
+    itemHover() {
+        let me = this;
+
+        me.Dropdown.find(".dropdown__row").hover(function() {
+            me.Dropdown.find(".dropdown__row").removeClass("dropdown__row--hover");
+            
+            if(!$(this).hasClass("dropdown__row--selected"))
+                $(this).toggleClass("dropdown__row--hover");
+        });
+    }
+
     /**
      * hiển thị dropdown
      * click vào item có type=dropdown
@@ -50,7 +66,7 @@
      dropdownHeadClick() {
         let me = this;
 
-        me.Toolbar.find("[type=dropdown]").on("click", function () {
+        me.Dropdown.find("[type=dropdown]").on("click", function () {
             me.toggleDropdown($(this));
         });
     }
@@ -74,12 +90,12 @@
     dropdownRowClick() {
         let me = this;
 
-        me.Toolbar.find("[row]").on("click", function () {
+        me.Dropdown.find("[row]").on("click", function () {
             let value = $(this).find("span").text();
 
             //set value cho dropdown khi click
             $(this).parent().parent().find("[type=dropdown]").val(value);
-            
+
             //xoay icon arrow
             $(this).parent().parent().find("[type=dropdown]").toggleClass("rotate");
 
@@ -105,7 +121,7 @@
     dropdownKeyup() {
         let me =  this;
 
-        me.Toolbar.on("change", "input", function(){
+        me.Dropdown.on("change", "input", function(){
             
         });
     }
