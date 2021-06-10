@@ -79,7 +79,7 @@
 
             //set value cho dropdown khi click
             $(this).parent().parent().find("[type=dropdown]").val(value);
-
+            
             //xoay icon arrow
             $(this).parent().parent().find("[type=dropdown]").toggleClass("rotate");
 

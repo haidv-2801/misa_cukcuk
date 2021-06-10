@@ -222,12 +222,10 @@ class BaseGrid {
             url = `${Constant.urlPrefix}${me.urlDelete}`,
             urlFull = `${url}/${record[itemId]}`;
 
-            alert("delete")
         //nếu chưa có bản ghi nào hoặc chưa đc họn
         if(!record)
             return;
-       debugger
-       
+    
         swal({
             title: `Bạn có chắc muốn xóa ${me.entity} này?`,
             text: "Không thể khôi phục sau khi xóa!",

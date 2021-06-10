@@ -12,7 +12,6 @@ CommonFn.formatMoney = money => {
 CommonFn.formatMoneyVer2 = money => {
     if(money && !isNaN(money)){
         let ans = money.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-        debugger
         return ans;
     }else{
         return money;

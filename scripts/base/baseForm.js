@@ -83,7 +83,9 @@ class BaseForm {
                 value = parseInt(value);
                 break;
             case Resource.DataTypeColumn.Enum:
+                
                 value = parseInt(value);
+
                 break;
             default:
                 break;
@@ -123,11 +125,18 @@ class BaseForm {
          switch(dataType) {
             case Resource.DataTypeColumn.Date:
                 value = CommonFn.convertDate(value);
+                break
+
             case Resource.DataTypeColumn.Number:
-                value = CommonFn.formatMoneyVer2(value);
+                let type = control.attr("type");
+                debugger
+                if(type == "money") {
+                    debugger
+                    value = CommonFn.formatMoneyVer2(value);
+                } 
                 break;
             case Resource.DataTypeColumn.Enum:
-                debugger
+                
                 let enumName = control.attr("EnumName");
                 value = CommonFn.getValueEnum(value, enumName);
                 break;
@@ -152,7 +161,7 @@ class BaseForm {
 
             switch(command) {
                 case Resource.CommandForm.Save:
-                    debugger
+                    
                     me.save();
                     break;
                 case Resource.CommandForm.Cancel:
@@ -172,12 +181,12 @@ class BaseForm {
      * DVHAI 02/06/2021
      */
     save() {
-        debugger
+        
         let me = this,
             isValid = me.validateForm();
         
         if(isValid) {
-            debugger
+            
             var data = me.getDataForm();
             me.saveData(data);
         }
