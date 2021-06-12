@@ -49,12 +49,18 @@
     itemHover() {
         let me = this;
 
-        me.Dropdown.find(".dropdown__row").hover(function() {
-            me.Dropdown.find(".dropdown__row").removeClass("dropdown__row--hover");
-            
+        me.Dropdown.find(".dropdown__row").on("mouseover", function() {
             if(!$(this).hasClass("dropdown__row--selected"))
-                $(this).toggleClass("dropdown__row--hover");
+                $(this).addClass("dropdown__row--hover");
         });
+
+        me.Dropdown.find(".dropdown__row").on("mouseleave", function() {
+            if(!$(this).hasClass("dropdown__row--selected"))
+                $(this).removeClass("dropdown__row--hover");
+             //
+            me.Dropdown.find(".dropdown__row").removeClass("dropdown__row--hover");
+        });
+
     }
 
     /**
@@ -69,6 +75,8 @@
         me.Dropdown.find("[type=dropdown]").on("click", function () {
             me.toggleDropdown($(this));
         });
+
+       
     }
 
     /**
@@ -113,6 +121,8 @@
 
             //ẩn hiện dấu x khi 1 row được chọn
             $(this).parent().parent().find("[type=dropdown]").addClass("dropdown-bg-size");
+
+            
         });
     }
 

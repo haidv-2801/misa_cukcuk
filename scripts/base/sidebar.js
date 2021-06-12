@@ -57,4 +57,4 @@ class SideBar {
     }
 }
 
-var Sidebar = new SideBar("#sidebar");
+var Sidebar = new SideBar(".sidebar");
