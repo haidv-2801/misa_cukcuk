@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/common/common.css" />
     <style>
-        
+      .btn {
+        outline: none;
+        border: none;
+        font-family: GoogleRegular;
+        height: 40px;
+        border-radius: 4px;
+      }
+
+      .alert {
+        width: 400px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: whitesmoke;
+      }
+
+      .alert__title {
+        line-height: 60px;
+        font-family: GoogleBold;
+        font-size: 15px;
+        height: 60px;
+        background-color: #bbb;
+      }
+
+      .alert__main {
+        font-size: 13px;
+        flex: 1;
+      }
+
+      .main__icon {
+      }
+
+      .main__text {
+      }
+
+      .alert__bottom {
+        height: 60px;
+        background-color: #bbb;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .alert__title,
+      .alert__main,
+      .alert__bottom {
+        padding: 0 24px;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="alert">
+      <div class="alert__title">title</div>
+      <div class="alert__main">
+        <div class="main__icon"></div>
+        <div class="main__text"></div>
+      </div>
+      <div class="alert__bottom">
+        <button class="btn btn__save">Hủy</button>
+        <button class="btn btn__cancel">Xóa</button>
+      </div>
+    </div>
+  </body>
 </html>

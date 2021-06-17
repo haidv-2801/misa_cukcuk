@@ -501,7 +501,7 @@ class BaseGrid {
      * Hàm format value từ dạng thô sang chuẩn
      * DVHAI 30/05/2021
      */
-    formatValue(data, dataType, column) {
+    formatValue(data, dataType) {
         let me = this;
         
         if(dataType) {
